@@ -1,0 +1,35 @@
+
+.auth {
+  max-width: 500px;
+  width: 100%;
+}
+
+.auth__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+  border: 1px solid black;
+  padding: 15px 15px 25px;
+}
+
+.auth__name {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 10px;
+  letter-spacing: 2.5px;
+  color: #232323;
+}
+
+.auth__error {
+  color: red;
+}
+
+.auth__mode {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-decoration: underline;
+}
