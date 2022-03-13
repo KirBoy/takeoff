@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useTypedSelector} from "../hooks/useTypedSelector";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
 import './auth.css'
 import {TextField, Button} from "@mui/material";
 import {useActions} from "../hooks/useAction";

@@ -1,0 +1,26 @@
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contacts_add {
+  display: flex;
+  flex-direction: column;
+  height: 230px;
+  max-width: 300px;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.contacts__search {
+  border: 1px solid #c4c4c4;
+}
+
+.contacts__error {
+  color: red;
+}

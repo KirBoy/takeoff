@@ -1,0 +1,69 @@
+{
+  "contacts": [
+    {
+      "userId": "1",
+      "id": "1",
+      "fullName": "ivan",
+      "phone": "+7(672)140-51-07"
+    },
+    {
+      "userId": "1",
+      "id": "3",
+      "fullName": "rara",
+      "phone": "+7(999)-999-99-99",
+      "contactId": "3"
+    },
+    {
+      "userId": "2",
+      "id": "4",
+      "fullName": "Loki",
+      "phone": "+7(544)110-27-12"
+    },
+    {
+      "userId": "2",
+      "id": "5",
+      "fullName": "ivan",
+      "phone": "+7(672)140-51-07"
+    },
+    {
+      "fullName": "Kir Boy",
+      "phone": "+7(232)-232-32-32",
+      "userId": 1,
+      "id": "kTSlJCr"
+    },
+    {
+      "fullName": "Kir Boy",
+      "phone": "+7(222)-222-22-22",
+      "userId": 1,
+      "id": "0-doJ55"
+    },
+    {
+      "fullName": "s",
+      "phone": "+7(121)-212-12-12",
+      "userId": 4,
+      "id": "DdJewo3"
+    }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "login": "admin",
+      "password": "admin"
+    },
+    {
+      "id": 2,
+      "login": "test",
+      "password": "test"
+    },
+    {
+      "login": "qqqq",
+      "password": "qqqq",
+      "id": 3
+    },
+    {
+      "login": "qqqqqqqq",
+      "password": "qqqqqqqqqqqqqq",
+      "id": 4
+    }
+  ]
+}
