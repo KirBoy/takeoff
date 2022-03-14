@@ -9,8 +9,8 @@
     {
       "userId": "1",
       "id": "3",
-      "fullName": "rara",
-      "phone": "+7(999)-999-99-99",
+      "fullName": "rab",
+      "phone": "+7(999)-991-11-99",
       "contactId": "3"
     },
     {
@@ -26,22 +26,16 @@
       "phone": "+7(672)140-51-07"
     },
     {
-      "fullName": "Kir Boy",
-      "phone": "+7(232)-232-32-32",
-      "userId": 1,
-      "id": "kTSlJCr"
-    },
-    {
-      "fullName": "Kir Boy",
-      "phone": "+7(222)-222-22-22",
-      "userId": 1,
-      "id": "0-doJ55"
-    },
-    {
-      "fullName": "s",
+      "fullName": "sor",
       "phone": "+7(121)-212-12-12",
       "userId": 4,
       "id": "DdJewo3"
+    },
+    {
+      "fullName": "Jija",
+      "phone": "+7(585)-853-43-43",
+      "userId": 1,
+      "id": "0M3aAM-"
     }
   ],
   "profiles": [
@@ -59,11 +53,6 @@
       "login": "qqqq",
       "password": "qqqq",
       "id": 3
-    },
-    {
-      "login": "qqqqqqqq",
-      "password": "qqqqqqqqqqqqqq",
-      "id": 4
     }
   ]
 }

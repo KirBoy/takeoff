@@ -52,7 +52,6 @@ export const contactsReducer = (state = initialState, action: ContactsAction): C
             }
 
         case ContactsActionTypes.IS_FETCHING:
-
             return {...state, isFetching: true}
 
         default:

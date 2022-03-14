@@ -3,7 +3,6 @@ import axios from "axios";
 import {
     ContactsAction,
     ContactsActionTypes,
-    ContactsInitialState,
     UpdateContacts,
     UsersContacts
 } from "../../types/contacts";
@@ -22,24 +21,18 @@ export const fetchUsersContacts = (userId: string) => {
             }
         } catch (e) {
 
-            // dispatch({
-            //     type: AuthActionTypes.LOGIN_ERROR,
-            // })
         }
     }
 }
 
 export const AddUsersContact = (data: UpdateContacts, userId: string) => {
-    return async (dispatch: Dispatch<ContactsAction>, state: ContactsInitialState) => {
+    return async (dispatch: Dispatch<ContactsAction>) => {
         dispatch({type: ContactsActionTypes.IS_FETCHING})
         try {
             const response = await axios.post('http://localhost:5656/contacts', {...data, userId: userId})
             dispatch({type: ContactsActionTypes.ADD_CONTACT, contact: response.data})
         } catch (e) {
-
-            // dispatch({
-            //     type: AuthActionTypes.LOGIN_ERROR,
-            // })
+            alert('something went wrong')
         }
     }
 }
@@ -51,10 +44,7 @@ export const DeleteUsersContact = (contactId: string) => {
             await axios.delete('http://localhost:5656/contacts/' + contactId)
             dispatch({type: ContactsActionTypes.DELETE_CONTACT, contactId: contactId})
         } catch (e) {
-
-            // dispatch({
-            //     type: AuthActionTypes.LOGIN_ERROR,
-            // })
+            alert('something went wrong')
         }
     }
 }
@@ -67,10 +57,7 @@ export const EditUsersContact = (fields: UpdateContacts, contactId: EditMode) =>
             await axios.patch('http://localhost:5656/contacts/' + contactId.id, {...fields, ...contactId})
             dispatch({type: ContactsActionTypes.EDIT_COMMENT, editedContact: {...fields, ...contactId}})
         } catch (e) {
-
-            // dispatch({
-            //     type: AuthActionTypes.LOGIN_ERROR,
-            // })
+            alert('something went wrong')
         }
     }
 }

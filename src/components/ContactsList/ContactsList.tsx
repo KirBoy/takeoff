@@ -56,6 +56,17 @@ const SearchIconWrapper = styled('div')(({theme}) => ({
     justifyContent: 'center',
 }));
 
+const defaultContact = {
+    borderBottom: '1px solid black',
+    marginBottom: '15px',
+    border: '1px solid #c4c4c4',
+}
+
+const editedContact = {
+    borderBottom: '1px solid black',
+    marginBottom: '15px'
+}
+
 type Contacts = {
     fullName: string,
     phone: string
@@ -73,8 +84,8 @@ const ContactsList: React.FC = () => {
     })
     const [editContactMode, setEditContactMode] = useState<EditMode | null>(null)
     const [error, setError] = useState<string>('')
-    const {fetchUsersContacts, AddUsersContact, DeleteUsersContact, EditUsersContact, SearchUsersContacts} = useActions();
 
+    const {fetchUsersContacts, AddUsersContact, DeleteUsersContact, EditUsersContact, SearchUsersContacts} = useActions();
     const id = useTypedSelector(state => state.auth.id)
     const {filteredContacts, allContacts, searchFilter, isFetching} = useTypedSelector(state => state.contacts)
 
@@ -161,14 +172,22 @@ const ContactsList: React.FC = () => {
                                onChange={onChange}
                                value={fields.fullName}
                     />
-                    <InputMask mask="+7(999)-999-99-99" onChange={onChange} value={fields.phone}>
-                        {() => <TextField name='phone' type="tel" label="Телефон" sx={{
-                            width: '300px'
-                        }}/>}
+                    <InputMask mask="+7(999)-999-99-99"
+                               onChange={onChange}
+                               value={fields.phone}>
+                        {() => <TextField name='phone'
+                                          type="tel"
+                                          label="Телефон"
+                                          sx={{width: '300px'}}/>}
                     </InputMask>
                 </div>
-                {error && <span className='contacts__error'>Поля не заполнины</span>}
-                <Button variant="contained" type='submit' disabled={isFetching}>{editContactMode ? 'Сохранить' : 'Добавить'}</Button>
+
+                {error && <span className='contacts__error'>Поля не заполнены</span>}
+                <Button variant="contained"
+                        type='submit'
+                        disabled={isFetching}>
+                    {editContactMode ? 'Сохранить' : 'Добавить'}
+                </Button>
             </form>
 
             <div className='contacts__contacts'>
@@ -181,15 +200,13 @@ const ContactsList: React.FC = () => {
                         inputProps={{'aria-label': 'search'}}
                     />
                 </Search>
-                {!filteredContacts.length && allContacts.length ? 'Ничего не найдено': ''}
+
+                {!filteredContacts.length && allContacts.length ? 'Ничего не найдено' : ''}
                 {!allContacts.length && 'У вас пока нету записей'}
+
                 <List sx={{width: '300px', bgColor: 'background.paper',}}>
                     {filteredContacts?.map(el =>
-                        <ListItem sx={editContactMode?.id === el.id ? {
-                            borderBottom: '1px solid black',
-                            marginBottom: '15px',
-                            border: '1px solid #c4c4c4',
-                        } : {borderBottom: '1px solid black', marginBottom: '15px'}} key={el.id}>
+                        <ListItem sx={editContactMode?.id === el.id ? defaultContact : editedContact} key={el.id}>
                             <ListItemAvatar>
                                 <Avatar>
                                     <AccountBoxIcon/>
@@ -202,6 +219,7 @@ const ContactsList: React.FC = () => {
                     )}
                 </List>
             </div>
+
         </div>
     );
 };

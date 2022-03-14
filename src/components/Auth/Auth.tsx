@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import './auth.css'
 import {TextField, Button} from "@mui/material";
-import {useActions} from "../hooks/useAction";
-import {AuthState} from "../types/auth";
+import {AuthState} from "../../types/auth";
+import {useActions} from "../../hooks/useAction";
+
 
 const Auth: React.FC = () => {
     const [fields, setFieldsValue] = useState<AuthState>({
@@ -69,10 +70,17 @@ const Auth: React.FC = () => {
                            name='password'
                            value={fields.password}
                            onChange={onChange}/>
+
                 {error && <span className='auth__error'>Неправильное имя пользователя или пароль</span>}
                 {localError && <span className='auth__error'>Заполните все поля</span>}
-                <Button variant="contained" type='submit'>{mode ? 'Зарегистрироваться' : 'Войти'}</Button>
-                <span className='auth__mode' onClick={changeMode}>{mode ? 'Уже есть аккаунт?' : 'Зарегистрироваться?'}</span>
+
+                <Button variant="contained" type='submit'>
+                    {mode ? 'Зарегистрироваться' : 'Войти'}
+                </Button>
+
+                <span className='auth__mode' onClick={changeMode}>
+                    {mode ? 'Уже есть аккаунт?' : 'Зарегистрироваться?'}
+                </span>
             </form>
         </div>
     );
