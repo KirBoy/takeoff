@@ -26,12 +26,6 @@
       "phone": "+7(672)140-51-07"
     },
     {
-      "fullName": "sor",
-      "phone": "+7(121)-212-12-12",
-      "userId": 4,
-      "id": "DdJewo3"
-    },
-    {
       "fullName": "Jija",
       "phone": "+7(585)-853-43-43",
       "userId": 1,
@@ -48,11 +42,6 @@
       "id": 2,
       "login": "test",
       "password": "test"
-    },
-    {
-      "login": "qqqq",
-      "password": "qqqq",
-      "id": 3
     }
   ]
 }
