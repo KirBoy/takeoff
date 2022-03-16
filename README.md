@@ -1,8 +1,9 @@
 Для старта проекта нужно запустить три команды 
 
-1) npm install
-2) npm run server
-3) npm run start
+1) npm install -g json-server
+2) npm install
+3) npm run server
+4) npm run start
  
 Для теста проекта можно зайти уже на существующий аккаут (login: admin, pass: admin) или создать новый.
 
